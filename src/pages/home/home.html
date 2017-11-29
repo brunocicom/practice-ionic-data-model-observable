@@ -1,14 +1,32 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-toolbar no-border-top>
+    <ion-title center>
+      <ion-buttons center>
+        <button ion-button (click)="renameChecklist()">
+          {{ checklist.observableTitle | async }}
+        </button>
+      </ion-buttons>
     </ion-title>
-  </ion-navbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addNewItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item block *ngFor="let item of checklist.observableList | async">
+      <button ion-button outline clear item-start (click)="deleteItem(item);">
+        <ion-checkbox outline [(ngModel)]="item.checked"></ion-checkbox>
+      </button>
+      <ion-input [(ngModel)]="item.title"></ion-input>
+      <button ion-button outline clear item-end (click)="deleteItem(item);">
+        <ion-icon name="remove"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

@@ -1,2 +1,2 @@
 # practice-ionic-data-model-observable
-Praticar modelo de dados observados
+From: https://www.joshmorony.com/building-mobile-apps-with-ionic-2/observables-in-ionic2.html

@@ -1,6 +1,6 @@
 {
   "name": "practice-ionic-data-model-observable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Bruno Oliveira",
   "homepage": "https://github.com/brunocicom/practice-ionic-data-model-observable",
   "private": true,
@@ -31,7 +31,7 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.2",
+    "@ionic/app-scripts": "^3.2.0",
     "typescript": "2.4.2"
   },
   "description": "Practice data models and observable"
